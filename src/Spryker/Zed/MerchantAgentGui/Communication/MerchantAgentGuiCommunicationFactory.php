@@ -17,25 +17,16 @@ use Spryker\Zed\MerchantAgentGui\Communication\Expander\MerchantAgentUserTableDa
 
 class MerchantAgentGuiCommunicationFactory extends AbstractCommunicationFactory
 {
-    /**
-     * @return \Spryker\Zed\MerchantAgentGui\Communication\Expander\MerchantAgentUserFormExpanderInterface
-     */
     public function createMerchantAgentUserFormExpander(): MerchantAgentUserFormExpanderInterface
     {
         return new MerchantAgentUserFormExpander();
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantAgentGui\Communication\Expander\MerchantAgentUserTableConfigExpanderInterface
-     */
     public function createMerchantAgentUserTableConfigExpander(): MerchantAgentUserTableConfigExpanderInterface
     {
         return new MerchantAgentUserTableConfigExpander();
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantAgentGui\Communication\Expander\MerchantAgentUserTableDataExpanderInterface
-     */
     public function createMerchantAgentUserTableDataExpander(): MerchantAgentUserTableDataExpanderInterface
     {
         return new MerchantAgentUserTableDataExpander();

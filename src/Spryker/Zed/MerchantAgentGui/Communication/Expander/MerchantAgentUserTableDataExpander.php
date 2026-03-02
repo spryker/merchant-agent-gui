@@ -30,11 +30,6 @@ class MerchantAgentUserTableDataExpander implements MerchantAgentUserTableDataEx
         ];
     }
 
-    /**
-     * @param bool|null $isMerchantAgent
-     *
-     * @return string
-     */
     protected function createIsMerchantAgentLabel(?bool $isMerchantAgent): string
     {
         return $isMerchantAgent ? '<span class="label label-success" title="Agent">Agent</span>' : '';

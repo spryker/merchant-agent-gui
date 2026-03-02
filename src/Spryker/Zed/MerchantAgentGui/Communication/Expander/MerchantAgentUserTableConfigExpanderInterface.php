@@ -11,10 +11,5 @@ use Spryker\Zed\Gui\Communication\Table\TableConfiguration;
 
 interface MerchantAgentUserTableConfigExpanderInterface
 {
-    /**
-     * @param \Spryker\Zed\Gui\Communication\Table\TableConfiguration $config
-     *
-     * @return \Spryker\Zed\Gui\Communication\Table\TableConfiguration
-     */
     public function expandConfig(TableConfiguration $config): TableConfiguration;
 }

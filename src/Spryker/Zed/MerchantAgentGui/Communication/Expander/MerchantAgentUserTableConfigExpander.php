@@ -19,11 +19,6 @@ class MerchantAgentUserTableConfigExpander implements MerchantAgentUserTableConf
      */
     protected const COL_STATUS = 'spy_user.status';
 
-    /**
-     * @param \Spryker\Zed\Gui\Communication\Table\TableConfiguration $config
-     *
-     * @return \Spryker\Zed\Gui\Communication\Table\TableConfiguration
-     */
     public function expandConfig(TableConfiguration $config): TableConfiguration
     {
         $config = $this->setMerchantAgentHeader($config);
@@ -32,11 +27,6 @@ class MerchantAgentUserTableConfigExpander implements MerchantAgentUserTableConf
         return $config;
     }
 
-    /**
-     * @param \Spryker\Zed\Gui\Communication\Table\TableConfiguration $config
-     *
-     * @return \Spryker\Zed\Gui\Communication\Table\TableConfiguration
-     */
     protected function setMerchantAgentHeader(TableConfiguration $config): TableConfiguration
     {
         $header = $this->insertAfterHeader($config->getHeader(), static::COL_STATUS, [
@@ -48,11 +38,6 @@ class MerchantAgentUserTableConfigExpander implements MerchantAgentUserTableConf
         return $config;
     }
 
-    /**
-     * @param \Spryker\Zed\Gui\Communication\Table\TableConfiguration $config
-     *
-     * @return \Spryker\Zed\Gui\Communication\Table\TableConfiguration
-     */
     protected function setRawMerchantAgentColumn(TableConfiguration $config): TableConfiguration
     {
         $config->addRawColumn(UserTransfer::IS_MERCHANT_AGENT);
